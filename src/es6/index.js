@@ -47,7 +47,7 @@ let person = {
 console.log(person.name, person.age);
 
 let{ name, age, country } = person;
-console.log(name, age, country)
+console.log(name, age, country);
 
 ////
 
@@ -75,5 +75,59 @@ console.log(globalVar);
 
 const a = 'b';
 console.log(a);
+
+////
+
+let name = 'Diego';
+let age = 23;
+
+obj = { name: name, age: age};
+
+obj2 = { name, age };
+
+console.log(obj);
+console.log(obj2);
+
+////
+
+const names = [
+    {name: 'Diego', age: 23},
+    {name: 'Sharon', age: 23}
+]
+
+let listOfNames = names.map(function(item){
+    console.log(item.name);
+})
+
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const listOfNames3 = (name, age) =>{
+    //...
+}
+
+const listOfNames4 = name =>{
+    //...
+}
+
+const square = num => num * num;
+
+console.log(square(5));
+
+////
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if(true){
+            resolve('Todo ok');
+        } else {
+            reject('Salio mal');
+        }
+    })
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
+
 
 ////
